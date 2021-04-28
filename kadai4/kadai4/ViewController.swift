@@ -9,19 +9,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
+
+    private var count = 0
    
     @IBAction func upCount(_ sender: Any) {
-        var resultUp:Int = Int(self.resultLabel.text!) ?? 0
-        for _ in 1...1 {
-            resultUp += 1
-    }
-        resultLabel.text = String(resultUp)
+        count += 1
+        resultLabel.text = String(count)
     }
     @IBAction func clearButton(_ sender: Any) {
-        resultLabel.text = String(0)
+        count = 0
+        resultLabel.text = String(count)
     }
-
 }
-
-    
-
